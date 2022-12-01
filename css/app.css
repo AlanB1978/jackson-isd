@@ -1,0 +1,26 @@
+.modal[data-v-752c848c] {
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+}
+.modal .modal-header[data-v-752c848c] {
+    position: relative;
+}
+.modal .modal-header button.close[data-v-752c848c] {
+      position: absolute;
+      background: transparent;
+      color: #555555;
+      outline: none;
+      top: 0;
+      right: 0;
+      margin: 1.5rem 1.5rem 0 0;
+      padding: 0;
+}
+.modal .modal-header button.close i[data-v-752c848c] {
+        font-size: 1.5rem;
+}
+
