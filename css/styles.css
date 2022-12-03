@@ -117,11 +117,13 @@ i.blend-75 {
   line-height: 1.5rem; }
 
 .component .selection-arrow {
+  z-index: 1;
   position: absolute;
   top: 0;
   right: 0;
   margin-top: 1.25rem;
-  margin-right: 1rem; }
+  margin-right: 1rem;
+  cursor: pointer; }
 
 .component h1, .component h2, .component h3, .component h4, .component h5 {
   font-family: "Roboto", sans-serif;
@@ -1429,7 +1431,10 @@ i.blend-75 {
     line-height: 1.125rem;
     height: 3.75rem; }
   .component #survey-form .survey-panels select {
-    font-size: 1rem; }
+    position: relative;
+    background-color: transparent;
+    font-size: 1rem;
+    z-index: 2; }
   .component #survey-form .survey-panels .grade-selection {
     position: relative; }
     .component #survey-form .survey-panels .grade-selection select {
@@ -2020,6 +2025,48 @@ i.blend-75 {
   .component .startDateFilter .vdp-datepicker__calendar .day__month_btn, .component .endDateFilter .vdp-datepicker__calendar .day__month_btn {
     width: 70%; }
 
+.component .search-notify-me {
+  font-size: 0.875rem !important; }
+
+.component .notify-me-help-text {
+  font-size: 0.75rem; }
+
+.component .alert-list-modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .component .alert-list-modal .alert-list-content {
+    position: relative;
+    background-color: #fff;
+    width: 40%;
+    padding: 2rem;
+    -webkit-box-shadow: 0px 0px 29px -11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 29px -11px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 29px -11px rgba(0, 0, 0, 0.75); }
+    .component .alert-list-modal .alert-list-content .close-popup {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      padding: 0.25rem !important;
+      border: 0 !important;
+      background-color: transparent !important;
+      color: #252525 !important; }
+      .component .alert-list-modal .alert-list-content .close-popup span {
+        font-size: 18px;
+        font-weight: 600; }
+    @media screen and (max-width: 860px) {
+      .component .alert-list-modal .alert-list-content {
+        width: 60%; } }
+    @media screen and (max-width: 620px) {
+      .component .alert-list-modal .alert-list-content {
+        width: 90%; } }
+
 @media screen and (max-width: 860px) {
   .component .endDateFilter .vdp-datepicker__calendar {
     right: 0; }
@@ -2095,6 +2142,10 @@ i.blend-75 {
     margin: 0 auto;
     top: -2rem;
     text-align: center; }
+    .component .opportunities .roadmap .roadmap-selectors .roadmap-select select {
+      z-index: 2;
+      position: relative;
+      background-color: transparent !important; }
     @media screen and (max-width: 900px) {
       .component .opportunities .roadmap .roadmap-selectors {
         top: -6rem;
@@ -2148,4 +2199,50 @@ i.blend-75 {
   .component .program-color-guide span {
     margin-right: 1rem;
     font-size: 1.125rem; }
+
+.join-the-pact-submission-fields .pact-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1rem; }
+  .join-the-pact-submission-fields .pact-form .pact-form-input {
+    position: relative;
+    flex-basis: 50%;
+    margin-bottom: 0.75rem; }
+    .join-the-pact-submission-fields .pact-form .pact-form-input:nth-child(1), .join-the-pact-submission-fields .pact-form .pact-form-input:nth-child(3) {
+      padding-right: 0.5rem; }
+    .join-the-pact-submission-fields .pact-form .pact-form-input:nth-child(2), .join-the-pact-submission-fields .pact-form .pact-form-input:nth-child(4) {
+      padding-left: 0.5rem; }
+    .join-the-pact-submission-fields .pact-form .pact-form-input .form-input-warning {
+      position: absolute;
+      bottom: -1.25rem;
+      right: 0;
+      font-size: 0.75rem;
+      color: #FE635F; }
+
+.join-the-pact-submission-fields .additional-pact-info ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0.25rem; }
+  .join-the-pact-submission-fields .additional-pact-info ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    line-height: 1.125rem; }
+    .join-the-pact-submission-fields .additional-pact-info ul li .checkbox {
+      display: flex;
+      align-items: center;
+      margin-right: 0.5rem; }
+
+.join-the-pact-submission-fields .submit-pact-button {
+  display: flex;
+  justify-content: center; }
+  .join-the-pact-submission-fields .submit-pact-button button {
+    background-color: #61ce70;
+    border: 0;
+    color: #fff; }
+    .join-the-pact-submission-fields .submit-pact-button button:disabled {
+      background-color: #d1d1d1; }
+
+body {
+  background-color: #000; }
 
